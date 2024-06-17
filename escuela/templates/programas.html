@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'styles/stylespages.css' %}">
+        <title>Pragamas Materias</title>
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-image: url('{% static 'images/bacl.jpg' %}');
+                background-size: cover;
+                background-attachment: fixed;
+            }
+        </style>
+    </head>
+<body>
+    <a href="{% url 'home' %}" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+      </svg></a>
+      <div id="section0" class="section active">
+        <!-- Incluye tu imagen aquí -->
+         <button > 
+        <img src="{%static 'images/ciclo_basico.png'%}" alt="Sección 1" class="img" onclick="showSection(1)" ></button>
+        <img src="{%static 'images/electromecanica.png'%}" alt="Sección 1" class="img" onclick="showSection(2)">
+        <img src="{%static 'images/mastromayor.png'%}" alt="Sección 1"class="img" onclick="showSection(3)">
+        <img src="{%static 'images/programacion.png'%}" alt="Sección 1"class="img"onclick="showSection(4)">
+    
+      </div>
+      
+    
+    
+      
+     <div id="section1" class="section" >
+    
+            <table class="back" style="  background-color: bisque;">
+           
+                <tr>
+                    <th>1º AÑO</th>
+                    <th>2º AÑO</th>
+                    <th>3º AÑO</th>
+                </tr>
+                <tr>
+                    <td>BIOLOGÍA</td>
+                    <td>BIOLOGÍA E HIGIENE</td>
+                    <td>QUÍMICA</td>
+                </tr>
+                <tr>
+                    <td>LENGUA Y LITERATURA</td>
+                    <td>LENGUA Y LITERATURA</td>
+                    <td>LENGUA Y LITERATURA</td>
+                </tr>
+                <tr>
+                    <td>EDUCACIÓN CÍVICA</td>
+                    <td>EDUCACIÓN CÍVICA</td>
+                    <td>EDUCACIÓN CÍVICA</td>
+                </tr>
+                <tr>
+                    <td>GEOGRAFÍA</td>
+                    <td>GEOGRAFÍA</td>
+                    <td>GEOGRAFÍA</td>
+                </tr>
+                <tr>
+                    <td>HISTORIA</td>
+                    <td>HISTORIA</td>
+                    <td>HISTORIA</td>
+                </tr>
+                <tr>
+                    <td>EDUCACIÓN FÍSICA</td>
+                    <td>EDUCACIÓN FÍSICA</td>
+                    <td>FISIOLOGIA Y PRIMEROS AUXILIOS</td>
+                </tr>
+                <tr>
+                    <td>MATEMÁTICA</td>
+                    <td>MATEMÁTICA</td>
+                    <td>MATEMÁTICA</td>
+                </tr>
+                <tr>
+                    <td>TALLER I</td>
+                    <td>TALLER II</td>
+                    <td>TALLER III</td>
+                </tr>
+                <tr>
+                    <td>INFORMÁTICA I</td>
+                    <td>INFORMÁTICA II</td>
+                    <td>INFORMÁTICA III</td>
+                </tr>
+                <tr>
+                    <td>INGLÉS</td>
+                    <td>INGLÉS</td>
+                    <td>INGLÉS</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>FÍSICA</td>
+                    <td>FÍSICA</td>
+                </tr>
+            </table>
+    
+      </div>
+    
+    
+    
+      <div id="section2" class="section">
+        <!-- Contenido para la sección 2 -->
+        <table class="back" style="background-color: bisque;">
+            <tr>
+                <th>4º AÑO</th>
+                <th>5º AÑO</th>
+                <th>6º AÑO</th>
+              </tr>
+              <tr>
+                <td>INFORMÁTICA I</td>
+                <td>INFORMÁTICA II</td>
+                <td>INFORMÁTICA III</td>
+              </tr>
+              <tr>
+                <td>ANÁLISIS MATEMÁTICO</td>
+                <td>DIBUJO Y ELEMENTOS DE MÁQUINAS</td>
+                <td>EQUIPOS Y APARATOS PARA MANIOBRA Y TRANSPORTE</td>
+              </tr>
+              <!-- ... (continúa agregando el resto de las filas) ... -->
+              <tr>
+                <td>EDUCACIÓN FÍSICA</td>
+                <td>EDUCACIÓN FÍSICA</td>
+                <td>EDUCACIÓN FÍSICA</td>
+              </tr>
+              <tr>
+                <td>TALLER</td>
+                <td>TALLER</td>
+                <td>TALLER</td>
+              </tr>
+              <tr>
+                <td>QUÍMICA</td>
+                <td>SEGURIDAD E HIGIENE INDUSTRIAL</td>
+                <td>TECNOLOGÍA DE LA FABRICACIÓN</td>
+              </tr>
+            </table>
+        
+      </div>
+      
+      <div id="section3" class="section">
+        <!-- Contenido para la sección 3 -->
+        <table class="back" style="background-color: bisque;">
+            <tr>
+                <th>4º AÑO</th>
+                <th>5º AÑO</th>
+                <th>6º AÑO</th>
+            </tr>
+            <tr>
+                <td>ARQUITECTURA I</td>
+                <td>ARQUITECTURA II</td>
+                <td>ADMINISTRACIÓN Y CONDUCCIÓN DE OBRAS</td>
+            </tr>
+            <tr>
+                <td>ANÁLISIS MATEMÁTICO</td>
+                <td>CONSTRUCCIONES COMPLEMENTARIAS</td>
+                <td>COMPUTOS Y PRESUPUESTOS</td>
+            </tr>
+            <tr>
+                <td>DIBUJO TÉCNICO</td>
+                <td>PROYECTOS I</td>
+                <td>PROYECTOS</td>
+            </tr>
+            <tr>
+                <td>ESTÁTICA Y RESISTENCIA DE MATERIALES</td>
+                <td>CONSTRUCCIONES DE HORMIGÓN ARMADO</td>
+                <td>INSTALACIONES ELECTROMECÁNICAS</td>
+            </tr>
+            <!-- ... -->
+        </table>
+    
+      </div>
+      
+      <div id="section4" class="section">
+        <!-- Contenido para la sección 4 -->
+        <table class="back" style="background-color: bisque;">
+            <tr>
+              <th>4º AÑO</th>
+              <th>5º AÑO</th>
+              <th>6º AÑO</th>
+            </tr>
+            <tr>
+              <td>INTRODUCCIÓN A LA PROGRAMACIÓN</td>
+              <td>ORGANIZACIÓN Y ARQUITECTURA I</td>
+              <td>ORGANIZACIÓN Y ARQUITECTURA II</td>
+            </tr>
+            <tr>
+              <td>INTRODUCCIÓN A LAS BASES DE DATOS</td>
+              <td>SISTEMAS OPERATIVOS I</td>
+              <td>SISTEMAS OPERATIVOS II</td>
+            </tr>
+            <tr>
+              <td>INGLÉS TÉCNICO I</td>
+              <td>INGLÉS TÉCNICO II</td>
+              <td>INGLÉS TÉCNICO III</td>
+            </tr>
+            <tr>
+              <td>INSTRUCCIÓN CÍVICA</td>
+              <td>ESTADÍSTICA Y PROBABILIDAD</td>
+              <td>COMPUTACIÓN GRÁFICA</td>
+            </tr>
+            <tr>
+              <td>LITERATURA</td>
+              <td>CIENCIA, TECNOLOGÍA Y AMBIENTE (CTA) / REDACCIÓN II</td>
+              <td>AUTOMATIZACIÓN DE REDES / ADMINISTRACIÓN II</td>
+            </tr>
+            <tr>
+              <td>MATEMÁTICA</td>
+              <td>PRINCIPIOS DE PROGRAMACIÓN / TESTING</td>
+              <td>ÉTICA Y CONDUCTA PROFESIONAL / SEGURIDAD DEL SOFTWARE</td>
+            </tr>
+            <tr>
+              <td>QUÍMICA</td>
+              <td>PROGRAMACIÓN PRÁCTICA Y PROYECTOS ESTUDIANTILES</td>
+              <td>PROGRAMACION WEB / SEGURIDAD INFORMÁTICA</td>
+            </tr>
+            <tr>
+              <td>EDUCACIÓN FÍSICA</td>
+              <td>LAB. TALLER / ESTUDIOS PROFUNDIZADOS</td>
+              <td>LABORATORIO TALLER/PROYECTO FINAL</td>
+            </tr>
+          </table>
+          
+       
+      </div>
+      <script>
+        var currentSection = 0;
+
+        function showSection(sectionNumber) {
+            var allSections = document.querySelectorAll('.section');
+            allSections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            var selectedSection = document.getElementById('section' + sectionNumber);
+            selectedSection.classList.add('active');
+            currentSection = sectionNumber;
+        }
+
+        function previousSection() {
+            var allSections = document.querySelectorAll('.section');
+            allSections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            var firstSection = document.getElementById('section0');
+            firstSection.classList.add('active');
+            currentSection = 0;
+        }
+    </script>
+      <button onclick="previousSection()">back</button>
+      <script src={% static 'scripts/main.js' %}></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/clases de consulta.css' %}">
+    <title>clases consulta</title>
+    
+</head>
+<body>
+    <a href="{% url 'home' %}" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+      </svg></a>
+      <div class="container">
+        <h1>Horarios de Consultas</h1>
+        <table class="consulta-table">
+            <thead>
+                <tr>
+                    <th>Materia</th>
+                    <th>Profesor</th>
+                    <th>Horarios</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Informática</td>
+                    <td>Natalia Muñoz</td>
+                    <td>Lunes 11:00 a 11:40 hs.<br>Lunes 15:00 a 15:40 hs.<br>Miércoles 09:30 a 10:50 hs.</td>
+                </tr>
+                <tr>
+                    <td>Construcciones</td>
+                    <td>Nicolás Catelli</td>
+                    <td>Lunes 13:40 a 15:10 hs.<br>Martes 11:00 a 12:20 hs.<br>Martes 17:20 a 18:40 hs.</td>
+                </tr>
+                <tr>
+                    <td>Educación Física</td>
+                    <td>Christian Aprea</td>
+                    <td>Lunes 09:30 a 11:30 hs.<br>Miércoles 14:30 a 16:30 hs.</td>
+                </tr>
+                <tr>
+                    <td>Ciencias Sociales (Historia, Geografía y Cívica)</td>
+                    <td>Maqui Vega</td>
+                    <td>Lunes 18:00 a 19:30 hs.<br>Jueves 16:50 a 18:00 hs.</td>
+                </tr>
+                <tr>
+                    <td>Dibujo</td>
+                    <td>Jonathan González</td>
+                    <td>Lunes 09:30 a 10:50 hs.<br>Martes 12:30 a 13:50 hs.</td>
+                </tr>
+                <tr>
+                    <td>Ciencias Naturales (Biología, Química y Física)</td>
+                    <td>José Racedo</td>
+                    <td>Lunes 11:40 a 12:20 hs.<br>Lunes 13:30 a 15:00 hs.<br>Jueves 08:30 a 9:30 hs.</td>
+                </tr>
+                <tr>
+                    <td>Mecánica</td>
+                    <td>Fernando Astuni</td>
+                    <td>Lunes 20:20 a 22:00 hs.<br>Miércoles 18:20 a 19:40 hs. y 21:00 a 21:40 hs.</td>
+                </tr>
+                <tr>
+                    <td>Electricidad</td>
+                    <td>Claudio Sisti</td>
+                    <td>Jueves 11:40 a 13:00 hs. (para 6° año)<br>Martes 19:30 a 20:30 hs.<br>Miércoles 18:00 a 19:00 hs. (para 4° y 5° año)</td>
+                </tr>
+                <tr>
+                    <td>Construcciones</td>
+                    <td>Gastón Muñoz</td>
+                    <td>Lunes 15:00 a 15:50 hs.<br>Martes 16:30 a 18:00 hs.<br>Miércoles 13:40 a 14:20 hs.</td>
+                </tr>
+                <tr>
+                    <td>Lengua y Literatura</td>
+                    <td>Estanislao Newbery</td>
+                    <td>Lunes 08:40 a 09:20 hs.<br>Lunes 16:20 a 17:00 hs.<br>Viernes 08:00 a 09:20 hs.<br>Viernes 15:40 a 17:00 hs.</td>
+                </tr>
+                <tr>
+                    <td>Matemática</td>
+                    <td>Rocío San Martín</td>
+                    <td>Lunes 18:30 a 19:50 hs. (aula 2)<br>Jueves 11:00 a 12:30 hs. (Biblioteca)</td>
+                </tr>
+                <tr>
+                    <td>Programación</td>
+                    <td>Eduardo Kunysz</td>
+                    <td>Martes 18:00 a 18:40 hs.<br>Jueves 18:00 a 19:40 hs.</td>
+                </tr>
+                <tr>
+                    <td>Inglés</td>
+                    <td>Cristina Bozzoli</td>
+                    <td>Lunes 13:00 a 13:40 hs.<br>Jueves 11:00 a 11:40 hs.<br>Jueves 16:40 a 18:10 hs.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

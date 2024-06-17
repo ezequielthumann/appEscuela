@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/stylespages.css' %}">
+    <title>calendario</title>
+</head>
+<body>
+    <a href="{% url 'home' %}" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+      </svg></a>
+      <table id="calendar">
+        <caption></caption>
+        <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+    </table>
+    
+    <script>
+        var date = new Date();
+        var month = date.getMonth();
+        var year = date.getFullYear();
+        var today = date.getDate();
+        var daysInMonth = new Date(year, month + 1, 0).getDate();
+        var startDay = new Date(year, month, 1).getDay();
+    
+        var calendar = document.getElementById('calendar');
+        var caption = calendar.getElementsByTagName('caption')[0];
+        caption.textContent = date.toLocaleString('default', { month: 'long' }) + ' ' + year;
+    
+        var dateNumber = 1;
+        for (var i = 0; i < 6; i++) {
+            var row = document.createElement('tr');
+            for (var j = 0; j < 7; j++) {
+                var cell = document.createElement('td');
+                if (i === 0 && j < startDay || dateNumber > daysInMonth) {
+                    cell.textContent = '';
+                } else {
+                    cell.textContent = dateNumber;
+                    if (dateNumber === today) {
+                        cell.classList.add('today');
+                    }
+                    dateNumber++;
+                }
+                row.appendChild(cell);
+            }
+            calendar.appendChild(row);
+        }
+    </script>
+</body>
+</html>

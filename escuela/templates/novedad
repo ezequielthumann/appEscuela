@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Novedad</title>
+    <link rel="stylesheet" href="{% static 'styles/novedad.css' %}">
+    <!-- Incluir aquí tus otros archivos CSS necesarios -->
+</head>
+<body>
+    <div class="container">
+        <div class="novedad-detail">
+            <h2>{{ novedad.titulo }}</h2>
+            <div class="novedad-image">
+                {% if novedad.tipo_imagen == 'atencion' %}
+                    <img src="{% static 'images/Atención.png' %}" alt="Imagen de atención">
+                {% elif novedad.tipo_imagen == 'coopedora' %}
+                    <img src="{% static 'images/Cooperadora.png' %}" alt="Imagen de Coopedaro">
+                {% elif novedad.tipo_imagen == 'matriculacion' %}
+                    <img src="{% static 'images/Matriculación.png' %}" alt="Imagen de matriculación">
+                {% elif novedad.tipo_imagen == 'mesas_examen' %}
+                    <img src="{% static 'images/mesas.png' %}" alt="Imagen de mesas de examen">
+                {% else %}
+                    <img src="{% static 'images/default.png' %}" alt="Imagen por defecto">
+                {% endif %}
+            </div>
+            <div class="novedad-content">
+                <p>{{ novedad.contenido }}</p>
+                <p>Fecha de publicación: {{ novedad.fecha_publicacion }}</p>
+                <!-- Otros detalles de la novedad según tu modelo -->
+            </div>
+        </div>
+    </div>
+    <a href="{% url 'home' %}" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+      </svg></a>
+</body>
+</html>
